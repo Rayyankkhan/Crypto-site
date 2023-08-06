@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 import DarkMode from '../../darkmode/DarkMode'
 import { CiGrid41 } from 'react-icons/ci';
 import { LuArrowDownUp } from 'react-icons/lu';
@@ -9,6 +9,12 @@ import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 import Dropdown from '../../buttons/Dropdown';
 
 const MyWallet = () => {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  // Function to handle the dropdown change
+  const handleDropdownChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
   return (
     <>
      <div className="main">
@@ -108,7 +114,7 @@ const MyWallet = () => {
 
           </div>
         </div>
-        <div className="grid-cols-2 p-4 border-2 w-[95%]">
+        <div className="grid-cols-2 p-4  w-[95%]">
           <div className="space-x-10 flex">
             <div className="border p-1 py-2 border-l-4 border-l-[#00B3FF] w-48 rounded-md ">
             <div className="mx-1">
@@ -116,26 +122,58 @@ const MyWallet = () => {
               <h3 className='text-[#15223C] font-semibold'>$128,320</h3>
               </div>
             </div>
-            <div className="border p-1 py-2 border-l-4 border-l-[#2DD683] w-48 rounded-md flex space-x-8 items-center ">
+            <div className="border p-1 py-2 border-l-4 border-l-[#2DD683]  w-48 rounded-md flex space-x-8 items-center ">
               <div className="mx-1">
                 <h6 className='text-sm text-[#AFAFAF]'>Income</h6>
               <h3 className='text-[#15223C] font-semibold'>$128,320</h3>
                 </div>
-                <div className='border h-7 bg-[#D8FFEC] w-16 justify-center'>
-                  <h6 className='text-xs mx-2 mt-1 text-[#2DD683]'>11.09</h6>
-
+                <div className=' h-7 bg-[#D8FFEC] rounded-md w-16 justify-center'>
+                  <h6 className='text-xs mx-2 mt-[6px] text-[#2DD683] rounded-lg'>11.09</h6>
                 </div>
             </div>
-            <div className="border p-1 py-2 border-l-4 border-l-[#FED142] w-48 rounded-md ">
+            <div className="border p-1 py-2 border-l-4 flex space-x-8 items-center  border-l-[#FED142] w-48 rounded-md ">
               <div className="mx-1">
                 <h6 className='text-sm text-[#AFAFAF]'>Saving</h6>
               <h3 className='text-[#15223C] font-semibold'>$128,320</h3>
                 </div>
+                <div className=' h-7 bg-[#D8FFEC] rounded-md w-16 justify-center'>
+                  <h6 className='text-xs mx-2 mt-[6px] text-[#2DD683] rounded-lg'>11.09</h6>
+                </div>
             </div>
            
           </div>
+          <div className="  space-x-6 flex mt-10">
+            <div className="border rounded-md">
+              <img src='/chart.png' alt='graph'/>
+     <div className="border rounded-lg py-1 -mt-[350px] ml-[440px]">
+      <select
+        id="dropdown"
+        className="rounded-lg p-[5px] text-center text-[#AFAFAF] mx-[10px] w-32 font-poppins  "
+        value={selectedOption}
+        onChange={handleDropdownChange}
+      >
+        <option value="" className="hover:bg-[#00B3FF]">Months</option>
+        <option value="option1" className="hover:bg-[#00B3FF]">3 months</option>
+        <option value="option2" className="hover:bg-[#00B3FF]">4 months</option>
+        <option value="option3" className="hover:bg-[#00B3FF]">6 months</option>
+      </select>
+    </div>
+              </div> 
+          <div className='p-4'>
+            <img src='/graph.png' alt='graph'/>
+            </div>
+          </div>
+          <div className=" space-x-6 flex mt-10">
+            <div className='border rounded-md'>
+            <img src='/chart1.png' alt='graph'/>
+            </div>
+            <div className='p-4'>
+            <img src='/frame.png' alt='graph'/>
+            </div>
+            
+          </div>
         </div>
-        <div className="grid-cols-3 border-2 w-96"></div>
+        {/* <div className="grid-cols-3 border-2 w-96"></div> */}
       </div>
             
     </div> 

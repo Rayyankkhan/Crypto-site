@@ -2,7 +2,8 @@
 import './App.css';
 import { BrowserRouter, Routes, Route,} from 'react-router-dom';
 import Home from './components/home/Home';
-import MyWallet from './components/pages/wallet/MyWallet';
+import Signup from './components/login/Signup';
+import MyWallet from './components/pages/wallet/MyWallet'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <BrowserRouter>
        <Routes>
         <Route path="/" element={<Home/>} /> 
-        <Route path="/wallet" element={<MyWallet/>} /> 
+        <Route path="/Signup" element={<Signup/>} /> 
+        <Route path="/MyWallet" element={<MyWallet/>} /> 
 
        </Routes>
       </BrowserRouter>

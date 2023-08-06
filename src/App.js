@@ -1,15 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
-// import Navbar from './components/home/navigation/Navbar';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link,
-//   BrowserRouter
-// } from "react-router-dom";
 import { BrowserRouter, Routes, Route,} from 'react-router-dom';
 import Home from './components/home/Home';
+import MyWallet from './components/pages/wallet/MyWallet';
 
 function App() {
   return (
@@ -18,6 +11,7 @@ function App() {
       <BrowserRouter>
        <Routes>
         <Route path="/" element={<Home/>} /> 
+        <Route path="/wallet" element={<MyWallet/>} /> 
 
        </Routes>
       </BrowserRouter>

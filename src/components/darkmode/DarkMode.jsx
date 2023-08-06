@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './darkmode.css'
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 
 const DarkMode = () => {
     const [theme, setTheme] = useState (null);
@@ -23,7 +24,7 @@ const DarkMode = () => {
     }, [theme])
 
     const handleThemeSwitch = () => {
-        setTheme (theme === "dark" ? "light" : "dark" );
+        setTheme (theme === "light" ? "dark" : "light" );
     };
     const [isDarkMode, setIsDarkMode] = useState(true);
 
@@ -38,7 +39,7 @@ const DarkMode = () => {
         handleThemeSwitch();
         toggleTheme();
         }} >
-           {isDarkMode ? "Dark" : "Light"}
+           {isDarkMode ? <BsFillMoonStarsFill/> : <BsFillSunFill/>}
         
       {/* <label class="switch" onClick={handleThemeSwitch}>
       <input type="checkbox" onClick={handleThemeSwitch}/>

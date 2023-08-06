@@ -20,10 +20,18 @@ const Navbar = () => {
         <button className="text-yellow  px-4 py-2 rounded-3xl w-28 h-10  bg-[#F2EDED] dark:bg-blackalpha hover:bg-yellow hover:text-white">
           Connect
         </button>
-        <button className="text-yellow px-4 py-2 rounded-3xl w-28 h-10   bg-[#F2EDED] dark:bg-blackalpha hover:bg-yellow hover:text-white">
+        <a href='/Signup'>
+          <button className="text-yellow px-4 py-2 rounded-3xl w-28 h-10   bg-[#F2EDED] dark:bg-blackalpha hover:bg-yellow hover:text-white">
           Login
         </button>
+          </a>
+        <a href='/MyWallet'>
+          <button className="text-yellow px-4 py-2 rounded-3xl w-28 h-10   bg-[#F2EDED] dark:bg-blackalpha hover:bg-yellow hover:text-white">
+          wallet
+        </button>
+          </a>
         <DarkMode/>
+        
       </div>
     </nav>
     </>

@@ -10,6 +10,8 @@ import './App.css';
 // } from "react-router-dom";
 import { BrowserRouter, Routes, Route,} from 'react-router-dom';
 import Home from './components/home/Home';
+import Sidebar from './components/pages/wallet/sidebar/Sidebar';
+import Signup from './components/login/Signup';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <BrowserRouter>
        <Routes>
         <Route path="/" element={<Home/>} /> 
+        <Route path="/sidebar" element={<Sidebar/>} /> 
+        <Route path="/Signup" element={<Signup/>} /> 
 
        </Routes>
       </BrowserRouter>
